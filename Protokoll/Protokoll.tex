@@ -1,0 +1,85 @@
+\documentclass[12pt,twoside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{german}
+\usepackage{graphicx}
+\usepackage[widemargins]{a4}
+\pagestyle{empty}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin4mm
+\headheight5mm
+\headsep6mm
+\topskip5mm
+\textwidth130mm
+\evensidemargin40mm
+\oddsidemargin5mm
+\textheight259mm
+\hoffset -10mm
+\footskip10mm
+\renewcommand{\textfraction}{0}
+
+\begin{document}
+
+% *********************** Titelseite ************************
+\begin{center}
+{\Large\sc Physik-Praktikum\\[1mm]
+ 
+% =====> hier das Semester eintragen ------------------------
+Sommersemester 2018
+% -----------------------------------------------------------
+}
+
+\vspace{2cm}\hrule\vspace{1.5cm}
+
+{\Huge\bf
+Protokoll zum Versuch\\[5mm]
+% =====> hier statt XXX die Versuchsnummer eintragen----<<<<<
+XXX 
+% -----------------------------------------------------------
+\\[1cm]
+{\em\Large
+% =====> hier die Versuchsbezeichnung eintragen --------<<<<<
+Bezeichnung des Versuchs
+% -----------------------------------------------------------
+}}
+\end{center}
+\vspace{1.5cm}\hrule\vspace{1cm}
+{\large\begin{center}\begin{tabular}{p{6cm}l}
+\multicolumn{2}{c}{\Large\bf Name:\ \ 
+% =====> hier den eigenen Namen eintragen --------------<<<<<
+Vorname Nachname
+% -----------------------------------------------------------
+}\\[3mm]
+% -----------------------------------------------------------
+\\{\em Assistent:} &
+% =====> Namen des Betreuers (soweit bekannt) eintragen <<<<<
+Betreuer
+% -----------------------------------------------------------
+\\ {\em Versuch durchgeführt am:} &
+% ====> Datum der Versuchsdurchf"uhrung ----------------<<<<<
+24.04.2018
+% -----------------------------------------------------------
+\end{tabular}
+\end{center}
+}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{./kapitel/einleitung}
+\input{./kapitel/theorie}
+\input{./kapitel/apparatur}
+\input{./kapitel/durchfuehrung}
+\input{./kapitel/auswertung}
+\input{./kapitel/zusammenfassung}
+\input{./kapitel/diskussion}
+% *********************** Beginn des Textes *****************
+% empfohlene Grobgliederung:
+% - Kurze Zusammenfassung der Versuchsidee
+% - Theorieteil
+% - Beschreibung der Apparatur
+% - Auswertung mit Fehlerdiskussion
+% -----------------------------------------------------------
+
+\end{document}
