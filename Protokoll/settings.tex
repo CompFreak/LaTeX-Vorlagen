@@ -1,0 +1,48 @@
+\documentclass[
+    12pt, % Schriftgröße
+    DIV10,
+    ngerman, % für Umlaute, Silbentrennung etc.
+    a4paper, % Papierformat
+    oneside, % einseitiges Dokument
+    titlepage, % es wird eine Titelseite verwendet
+    parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
+    headings=normal, % Größe der Überschriften verkleinern
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    index=totoc, % Index im Inhaltsverzeichnis aufführen
+    captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+    final % Status des Dokuments (final/draft)
+]{scrartcl}
+\usepackage{geometry}
+\geometry{a4paper,top=30mm,left=30mm,right=20mm,bottom=32mm}
+
+\usepackage[latin1]{inputenc}
+\usepackage[german]{babel}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{pgfplotstable} 
+\usepackage{hyperref} % References as hyperlinks
+\usepackage[noabbrev]{cleveref}
+\usepackage{xr}
+
+\usepackage[
+    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
+    headsepline, % Trennlinie unter Kopfzeile
+    ilines % Trennlinie linksbündig ausrichten
+]{scrpage2}
+
+\usetikzlibrary {positioning, calc, arrows}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+% Kopfzeile
+\ihead{\headmark} % links
+\chead{}
+\setlength{\headheight}{15mm} % Höhe der Kopfzeile
+\setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile
+
+% Fußzeile
+%\ifoot{} % links
+\cfoot{} % mitte
+\ofoot{\pagemark} % rechts
+
+\pagestyle{scrheadings}
