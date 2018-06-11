@@ -1,20 +1,20 @@
 \documentclass[
-    12pt, % Schriftgröße
+    12pt, % SchriftgrÃ¶ÃŸe
     DIV10,
-    ngerman, % für Umlaute, Silbentrennung etc.
+    ngerman, % fÃ¼r Umlaute, Silbentrennung etc.
     a4paper, % Papierformat
     oneside, % einseitiges Dokument
     titlepage, % es wird eine Titelseite verwendet
-    parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
-    headings=normal, % Größe der Überschriften verkleinern
-    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
-    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
-    index=totoc, % Index im Inhaltsverzeichnis aufführen
+    parskip=half, % Abstand zwischen AbsÃ¤tzen (halbe Zeile)
+    headings=normal, % GrÃ¶ÃŸe der Ãœberschriften verkleinern
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis auffÃ¼hren
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis auffÃ¼hren
+    index=totoc, % Index im Inhaltsverzeichnis auffÃ¼hren
     captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
     final % Status des Dokuments (final/draft)
 ]{scrartcl}
 \usepackage{geometry}
-\geometry{a4paper,top=30mm,left=30mm,right=20mm,bottom=32mm}
+\geometry{a4paper,top=20mm,left=30mm,right=20mm,bottom=20mm}
 
 \usepackage[latin1]{inputenc}
 \usepackage[german]{babel}
@@ -25,11 +25,12 @@
 \usepackage{hyperref} % References as hyperlinks
 \usepackage[noabbrev]{cleveref}
 \usepackage{xr}
+\usepackage[onehalfspacing]{setspace} % Zeilenabstand
 
 \usepackage[
     automark, % Kapitelangaben in Kopfzeile automatisch erstellen
     headsepline, % Trennlinie unter Kopfzeile
-    ilines % Trennlinie linksbündig ausrichten
+    ilines % Trennlinie linksbÃ¼ndig ausrichten
 ]{scrpage2}
 
 \usetikzlibrary {positioning, calc, arrows}
@@ -37,10 +38,10 @@
 % Kopfzeile
 \ihead{\headmark} % links
 \chead{}
-\setlength{\headheight}{15mm} % Höhe der Kopfzeile
+\setlength{\headheight}{15mm} % HÃ¶he der Kopfzeile
 \setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile
 
-% Fußzeile
+% FuÃŸzeile
 %\ifoot{} % links
 \cfoot{} % mitte
 \ofoot{\pagemark} % rechts
