@@ -1,0 +1,141 @@
+\include{latex_einstellungen/settings}
+
+\begin{document}
+% hier werden die Trennvorschläge inkludiert
+\input{latex_einstellungen/trennung}
+
+%Schriftart Helvetica
+%\changefont{phv}{m}{n}
+
+% Titelseite %
+\include{latex_einstellungen/deckblatt}
+
+% römische Numerierung
+%\pagenumbering{arabic}
+
+% 1.5 facher Zeilenabstand
+\onehalfspacing
+
+% Sperrvermerk
+\input{sperrvermerk}
+
+% Einleitung / Abstract
+\include{abstract}
+
+% einfacher Zeilenabstand
+\singlespacing
+
+% Inhaltsverzeichnis anzeigen
+\newpage
+\tableofcontents
+
+% das Abbildungsverzeichnis
+%\newpage
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+% Abbildungsverzeichnis endgueltig anzeigen
+\listoffigures
+
+% das Tabellenverzeichnis
+%\newpage
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+% \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
+% Abbildungsverzeichnis endgueltig anzeigen
+\listoftables
+
+%% WORKAROUND für Listings
+%\makeatletter% --> De-TeX-FAQ
+%\renewcommand*{\lstlistoflistings}{%
+%  \begingroup
+%    \if@twocolumn
+%      \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+%    \lol@heading
+%    \setlength{\parskip}{\z@}%
+%    \setlength{\parindent}{\z@}%
+%    \setlength{\parfillskip}{\z@ \@plus 1fil}%
+%    \@starttoc{lol}%
+%    \if@restonecol\twocolumn\fi
+%  \endgroup
+%}
+%\makeatother% --> \makeatletter
+% das Listingverzeichnis
+%\newpage
+% Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Listingverzeichnis}
+\fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
+\renewcommand{\lstlistlistingname}{Listingverzeichnis}
+\lstlistoflistings
+%%%%
+
+% das Abkürzungsverzeichnis
+%\newpage
+% Abkürzungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+% das Abkürzungsverzeichnis entgültige Ausgeben
+\fancyhead[L]{Abkürzungsverzeichnis} %Kopfzeile links
+\input{latex_einstellungen/abkuezungen/abkuerzungen}
+\printnomenclature
+
+% Definiert Stegbreite bei zweispaltigem Layout
+\setlength{\columnsep}{25pt}
+
+%%%%%%% EINLEITUNG %%%%%%%%%%%%
+%\twocolumn
+\newpage
+\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+
+% 1,5 facher Zeilenabstand
+\onehalfspacing
+
+% einzelne Kapitel
+\input{1_einleitung}
+
+\input{2_kap1}
+
+\input{3_kap2}
+
+%....
+
+\input{7_ausblick}
+
+\input{8_fazit}
+
+\onecolumn
+% einfacher Zeilenabstand
+\singlespacing
+% Literaturliste soll im Inhaltsverzeichnis auftauchen
+\newpage
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+% Literaturverzeichnis anzeigen
+\renewcommand\refname{Literaturverzeichnis}
+\bibliography{Hauptdatei}
+
+%% Index soll Stichwortverzeichnis heissen
+% \newpage
+% % Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
+% \addcontentsline{toc}{section}{Stichwortverzeichnis}
+% \renewcommand{\indexname}{Stichwortverzeichnis}
+% % Stichwortverzeichnis endgueltig anzeigen
+% \printindex
+
+\onehalfspacing
+% evtl. Anhang
+\newpage
+\addcontentsline{toc}{section}{Anhang}
+\fancyhead[L]{Anhang} %Kopfzeile links
+\input{anhang/anhang}
+
+% Eidesstattliche Erklärung
+\addcontentsline{toc}{section}{Eidesstattliche Erklärung}
+\include{erklaerung}
+
+% leere Abschlussseite
+\newpage
+\thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
+\section*{ }
+
+\end{document}
